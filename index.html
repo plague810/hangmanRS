@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="game-title">Hangman Game</h1>
+
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+            <!-- frame -->
+            <line x1="60" y1="20" x2="60" y2="200" />
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="200" x2="20" y2="200" />
+            <line x1="60" y1="200" x2="170" y2="200" />
+            <!-- head -->
+            <circle cx="140" cy="70" r="20" class="hide" />
+            <!-- body -->
+            <line x1="140" y1="90" x2="140" y2="130" class="hide" />
+            <!-- right arm -->
+            <line x1="140" y1="100" x2="160" y2="120" class="hide" />
+            <!-- left arm -->
+            <line x1="140" y1="100" x2="120" y2="120" class="hide" />
+            <!-- right leg -->
+            <line x1="140" y1="130" x2="150" y2="170" class="hide" />
+            <!-- left leg -->
+            <line x1="140" y1="130" x2="130" y2="170" class="hide" />
+        </svg>
+    </div>
+
+    <div id="guess-area">
+        <p class="guess-paragraph"></p>
+    </div>
+  
+    <input class="input-box" type="text" placeholder="Your Guess..">
+    <button value="send" id="submit" onclick="submitButton()">Enter</button>
+
+    <div id="used-letters">
+        <h3>Used Letters</h3>
+        <p class="letter-area"></p>
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>
